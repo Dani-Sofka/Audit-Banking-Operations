@@ -1,4 +1,4 @@
-package com.bank.AuditBankingOperations;
+package bank.AuditBankingOperations;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
