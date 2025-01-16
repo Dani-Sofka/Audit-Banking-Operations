@@ -72,4 +72,23 @@ Este endpoint permite guardar una transacción bancaria. La fecha de la transacc
 
 La API está documentada usando Swagger. Para acceder a la documentación interactiva, simplemente levanta el servidor y visita http://localhost:8080/swagger-ui.html.
 
+### Detalles de las Pruebas
+
+## Pruebas Unitarias:
+
+Se usan mocking con Mockito para simular el comportamiento de los repositorios y otras dependencias.
+Se emplea StepVerifier para trabajar con flujos reactivos (como Flux o Mono) y verificar que los datos se emiten correctamente.
+
+## Pruebas de Integración:
+
+Se utilizan pruebas reactivas con WebTestClient para simular peticiones HTTP y verificar las respuestas de la API.
+Estas pruebas permiten verificar que los endpoints estén funcionando correctamente en un entorno de integración completo.
+
+## Requisitos para las Pruebas
+
+- **JUnit 5**: Framework de pruebas utilizado.
+- **Mockito**: Para simular comportamientos de repositorios.
+- **WebTestClient**: Herramienta de prueba para aplicaciones reactivas con Spring WebFlux.
+- **Spring Boot Test**: Proporciona soporte para realizar pruebas de integración en aplicaciones de Spring Boot.
+
 
