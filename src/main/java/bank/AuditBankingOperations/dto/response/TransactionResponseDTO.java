@@ -1,4 +1,4 @@
-package bank.AuditBankingOperations.dto;
+package bank.AuditBankingOperations.dto.response;
 
 import bank.AuditBankingOperations.enums.TransactionType;
 import bank.AuditBankingOperations.enums.WithdrawalType;

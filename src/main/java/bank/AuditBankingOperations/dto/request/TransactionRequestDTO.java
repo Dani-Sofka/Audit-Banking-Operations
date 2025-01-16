@@ -1,7 +1,8 @@
-package bank.AuditBankingOperations.dto;
+package bank.AuditBankingOperations.dto.request;
 
 import bank.AuditBankingOperations.enums.TransactionType;
 import bank.AuditBankingOperations.enums.WithdrawalType;
+import bank.AuditBankingOperations.model.Transaction;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
