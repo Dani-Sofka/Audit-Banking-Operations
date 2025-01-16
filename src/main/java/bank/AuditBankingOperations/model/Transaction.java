@@ -4,6 +4,7 @@ package bank.AuditBankingOperations.model;
 import bank.AuditBankingOperations.enums.TransactionType;
 import bank.AuditBankingOperations.enums.WithdrawalType;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
@@ -14,7 +15,8 @@ import java.time.LocalDateTime;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "Transactions")
+@Builder
+@Document(collection = "transactions")
 public class Transaction {
 
     @Id
