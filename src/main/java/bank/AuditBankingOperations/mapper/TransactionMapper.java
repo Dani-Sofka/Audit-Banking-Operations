@@ -5,6 +5,8 @@ import bank.AuditBankingOperations.dto.response.TransactionResponseDTO;
 import bank.AuditBankingOperations.enums.TransactionType;
 import bank.AuditBankingOperations.model.Transaction;
 
+import java.time.LocalDateTime;
+
 public class TransactionMapper {
 
     /*
@@ -41,7 +43,7 @@ public class TransactionMapper {
                 .initialBalance(requestDTO.getInitialBalance())
                 .amount(requestDTO.getAmount())
                 .finalBalance(requestDTO.getInitialBalance() + requestDTO.getAmount())
-                .createdAt(requestDTO.getLocalDateTime())
+                .createdAt(LocalDateTime.now())
                 .withdrawalType(requestDTO.getWithdrawalType())
                 .build();
     }
