@@ -29,7 +29,6 @@ La API proporciona dos operaciones principales:
 Este endpoint permite guardar una transacción bancaria. La fecha de la transacción se genera automáticamente en el servidor.
 
 #### Solicitud (JSON)
-```json
 {
   "customerId": 12345,
   "transactionType": "DEPOSIT",
@@ -48,7 +47,6 @@ Este endpoint permite guardar una transacción bancaria. La fecha de la transacc
 - **withdrawalType**: Tipo de retiro (si aplica). Valores posibles: **ATM**, **COUNTER**, **ONLINE**.
 
 #### Respuesta (JSON)
-```json
 {
   "transactionType": "DEPOSIT",
   "initialBalance": 1000.00,
