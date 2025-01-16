@@ -19,5 +19,4 @@ public class TransactionRequestDTO {
     private double initialBalance;
     private double amount;
     private WithdrawalType withdrawalType;
-    private LocalDateTime localDateTime;
 }
