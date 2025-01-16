@@ -76,13 +76,13 @@ La API está documentada usando Swagger. Para acceder a la documentación intera
 
 ## Pruebas Unitarias:
 
-Se usan mocking con Mockito para simular el comportamiento de los repositorios y otras dependencias.
-Se emplea StepVerifier para trabajar con flujos reactivos (como Flux o Mono) y verificar que los datos se emiten correctamente.
+- **Se usan mocking con Mockito para simular el comportamiento de los repositorios y otras dependencias**.
+- **Se emplea StepVerifier para trabajar con flujos reactivos (como Flux o Mono) y verificar que los datos se emiten correctamente**.
 
 ## Pruebas de Integración:
 
-Se utilizan pruebas reactivas con WebTestClient para simular peticiones HTTP y verificar las respuestas de la API.
-Estas pruebas permiten verificar que los endpoints estén funcionando correctamente en un entorno de integración completo.
+- **Se utilizan pruebas reactivas con WebTestClient para simular peticiones HTTP y verificar las respuestas de la API**.
+- **Estas pruebas permiten verificar que los endpoints estén funcionando correctamente en un entorno de integración completo**.
 
 ## Requisitos para las Pruebas
 
@@ -90,5 +90,10 @@ Estas pruebas permiten verificar que los endpoints estén funcionando correctame
 - **Mockito**: Para simular comportamientos de repositorios.
 - **WebTestClient**: Herramienta de prueba para aplicaciones reactivas con Spring WebFlux.
 - **Spring Boot Test**: Proporciona soporte para realizar pruebas de integración en aplicaciones de Spring Boot.
+
+## Enpoint en postman
+![image](https://github.com/user-attachments/assets/397a54c8-0516-42fd-95c1-c5f3e464b5dc)
+
+
 
 
