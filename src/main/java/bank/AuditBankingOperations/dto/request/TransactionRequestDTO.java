@@ -14,7 +14,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class TransactionRequestDTO {
 
-    private Long customerId;
+    private String transactionId;
+    private String customerId;
     private TransactionType transactionType;
     private double initialBalance;
     private double amount;

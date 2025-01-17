@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class TransactionResponseDTO {
 
+    private String customerId;
     private TransactionType transactionType;
     private double initialBalance;
     private double finalBalance;
