@@ -26,8 +26,8 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     @Override
-    public Flux<TransactionResponseDTO> getTransactionById(long id) {
-        return transactionRepository.findByCustomerId(id)
+    public Flux<TransactionResponseDTO> streamTransaction(String customerId) {
+        return transactionRepository.findWithTailableCursorByCustomerId(customerId)
                 .map(TransactionMapper::toResponseDTO);
     }
 }

@@ -15,6 +15,7 @@ public class TransactionMapper {
     public static TransactionResponseDTO toResponseDTO(Transaction transaction) {
         if (transaction.getTransactionType() == TransactionType.WITHDRAWAL) {
             return new TransactionResponseDTO(
+                    transaction.getCustomerId(),
                     transaction.getTransactionType(),
                     transaction.getInitialBalance(),
                     transaction.getFinalBalance(),
@@ -24,6 +25,7 @@ public class TransactionMapper {
             );
         }
         return new TransactionResponseDTO(
+                transaction.getCustomerId(),
                 transaction.getTransactionType(),
                 transaction.getInitialBalance(),
                 transaction.getFinalBalance(),
@@ -37,6 +39,17 @@ public class TransactionMapper {
         Convertir de TransactionRequestDTO a Transaction (para cuando guardamos una nueva transacción)
      */
     public static Transaction toEntity(TransactionRequestDTO requestDTO) {
+        if (requestDTO.getTransactionType() == TransactionType.WITHDRAWAL) {
+            return Transaction.builder()
+                    .customerId(requestDTO.getCustomerId())
+                    .transactionType(requestDTO.getTransactionType())
+                    .initialBalance(requestDTO.getInitialBalance())
+                    .amount(requestDTO.getAmount())
+                    .finalBalance(requestDTO.getInitialBalance() - requestDTO.getAmount())
+                    .createdAt(LocalDateTime.now())
+                    .withdrawalType(requestDTO.getWithdrawalType())
+                    .build();
+        }
         return Transaction.builder()
                 .customerId(requestDTO.getCustomerId())
                 .transactionType(requestDTO.getTransactionType())

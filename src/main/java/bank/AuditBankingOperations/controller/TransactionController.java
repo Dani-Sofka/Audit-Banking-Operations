@@ -13,7 +13,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/audit")
+@RequestMapping("/api/transaction")
 @RequiredArgsConstructor
 public class TransactionController {
 
@@ -25,8 +25,9 @@ public class TransactionController {
         return transactionService.saveTransaction(transaction);
     }
 
-    @GetMapping(value = "/transaction", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public Flux<TransactionResponseDTO> streamTransaction(@RequestParam long id){
-        return transactionService.getTransactionById(id);
+    @GetMapping(value = "/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    public Flux<TransactionResponseDTO> streamTransaction(@RequestParam String customerId){
+        return transactionService.streamTransaction(customerId);
     }
 }

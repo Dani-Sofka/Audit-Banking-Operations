@@ -7,5 +7,5 @@ import reactor.core.publisher.Mono;
 
 public interface TransactionService {
     Mono<TransactionResponseDTO> saveTransaction(TransactionRequestDTO transactionRequestDTO);
-    Flux<TransactionResponseDTO> getTransactionById(long id);
+    Flux<TransactionResponseDTO> streamTransaction(String customerId);
 }
